@@ -102,21 +102,21 @@ namespace TravelApi.Controllers
     }
 
     
-    // // DELETE: api/Destinations/5
-    // [HttpDelete("{id}")]
-    // public async Task<IActionResult> DeleteDestination(int id)
-    // {
-    //   var destination = await _db.Destinations.FindAsync(id);
-    //   if (destination == null)
-    //   {
-    //     return NotFound();
-    //   }
+    // DELETE: api/Destinations/5
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteDestination(int id)
+    {
+      var destination = await _db.Destinations.FindAsync(id);
+      if (destination == null)
+      {
+        return NotFound();
+      }
 
-    //   _db.Destinations.Remove(destination);
-    //   await _db.SaveChangesAsync();
+      _db.Destinations.Remove(destination);
+      await _db.SaveChangesAsync();
 
-    //   return NoContent();
-    // }
+      return NoContent();
+    }
         
     private bool DestinationExists (int id)
     {
