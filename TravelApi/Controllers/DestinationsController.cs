@@ -36,15 +36,15 @@ namespace TravelApi.Controllers
         query = query.Where(entry => entry.City == city);
       }
 
-      // if(destinationid != null)
-      // {
-      //   query = query.Where(entry => entry.DestinationId == destinationid);
-      // }
+      if(destinationid != null)
+      {
+        query = query.Where(entry => entry.DestinationId == destinationid);
+      }
 
-      // if (minRating > 0)
-      // {
-      //   query = query.Where(entry => entry.Rating >= minRating);
-      // }
+      if (minRating > 0)
+      {
+        query = query.Where(entry => entry.Rating >= minRating);
+      }
 
       return await query.ToListAsync();
     }
