@@ -20,9 +20,9 @@ Setup/Installation Requirements
 Download or clone the repo here: (ADDRESS REPO HERE)
 to your local machine
 
-Open git BASH terminal and navigate to the AnimalShelter folder within the directory
+Open git BASH terminal and navigate to the TravelApi folder within the directory
 
-Create appsettings.json file in the Factory directory of AnimalShelter.Solution and add the following code to the file: touch appsettings.json
+Create appsettings.json file in the TravelApi directory of TravelApi.Solution-Main and add the following code to the file: touch appsettings.json
 
 {
   "Logging":
@@ -37,12 +37,12 @@ Create appsettings.json file in the Factory directory of AnimalShelter.Solution 
   "AllowedHosts": "*",
   "ConnectionStrings":
   {
-    "DefaultConnection": "Server=localhost;Port=3306;database=animal_shelter;uid={YOUR_USERNAME_NAME};pwd={YOUR_PASSWORD};"
+    "DefaultConnection": "Server=localhost;Port=3306;database=travel_api;uid=root;pwd=epicodus;"
   }
 }
 Be sure to remove the {YOUR_USERNAME_NAME} and {YOUR_PASSWORD} and fill in the the code snippet with your username for MySQL, and MySQL password Do not include the curly brackets in your code snippet of appsettings.json
 
-Make sure EF Core is installed to create and utilize migrations. Run the following code in the git BASH terminal to install. $ dotnet tool install --global dotnet-ef --version 3.0.0
+Make sure EF Core is installed to create and utilize migrations. Run the following code in the git BASH terminal to install. $ dotnet tool install --global dotnet-ef --version 
 
 Run "dotnet restore" in the git BASH terminal to install needed dependencies. $ dotnet restore
 
@@ -58,24 +58,19 @@ API Documentation
 API Endpoints
 HTTP Request URL: http://localhost:5000
 General request structure:
-GET /api/Cats
-POST /api/Cats
-GET /api/Cats/{id}
-PUT /api/Cats/{id}
-DELETE /api/Cats/{id} 
-substitute Cats with Dogs or SmallAnimals depending on the intended query results
+GET /api/Destinations
+POST /api/Destinations
+GET /api/Destinations/{id}
+PUT /api/Destinations/{id}
+DELETE /api/Destinations/{id} 
+
 examples of a request URL query string:
-https://localhost:5001/api/Cats?name=Kimmy
-https://localhost:5001/api/Dogs?name=Muffin
-https://localhost:5001/api/SmallAnimals?name=Bacon
+https://localhost:5001/api/Destinations
+
 Documentation utilized for further explorations:
-<!-- CORS source: infoworld
-CORS source: microsoft docs
-Pagination source: c-sharpcorner
-Pagination source: jasonwatmore
-Unique constraints to avoid duplicates source: stack overflow -->
 Swagger source: microsoft docs
 Swagger utilizing Swashbuckle source: microsoft docs -->
+
 Bugs
 no known bugs at this time
 
@@ -84,6 +79,6 @@ MIT & AFL
 
 Copyright ©️ 2021 
 
-if any issues are discovered while navigating the site, please let me know! It will help me learn and grow!
+if any issues are discovered while navigating the site, please let us know! It will help me learn and grow!
 
-Contact Information
+Contact Information: cnakayam@gmail.com
